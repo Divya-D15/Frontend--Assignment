@@ -1,0 +1,25 @@
+//1.Apply CSS shadow effects like for image box and hover a cursor. 
+
+<html>
+<head>
+    
+    <title>Image Shadow Hover Effect</title>
+    <style>
+        .image-box {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .image-box:hover {
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <img src="https://via.placeholder.com/300" alt="Image" class="image-box">
+</body>
+</html>

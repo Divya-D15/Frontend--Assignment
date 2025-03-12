@@ -1,24 +1,39 @@
-//3. Navigate within the page to a different section. 
+//3.Use all the HTML5 tags and develop a web page article, aside, figcaption, figure,footer,header, hgroup,mark,nav, section,time 
 <html>
 <head>
-	<title>HTML Basics</title>
+	<title>HTML5 Article</title>
 </head>
 <body>
-	
-	<h1>Welcome to HTML Basics</h1>
-	
-	
-	<p><a href="#section1">Section 1</a> | <a href="#section2">Section 2</a> | <a href="#section3">Section 3</a></p>
-	
-	<h2 id="section1">Section 1</h2>
-	<p>This is section 1.</p>
-	
-
-	<h2 id="section2">Section 2</h2>
-	<p>This is section 2.</p>
-	
-
-	<h2 id="section3">Section 3</h2>
-	<p>This is section 3.</p>
+	<header>
+		<hgroup>
+			<h1>Main Title</h1>
+			<h2>Sub Title</h2>
+		</hgroup>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+			</ul>
+		</nav>
+	</header>
+	<article>
+		<section>
+			<h2>Section 1</h2>
+			<p>This is the first section of the article.</p>
+			<mark>This text is highlighted.</mark>
+			<time datetime="2022-01-01">January 1, 2022</time>
+		</section>
+		<figure>
+			<img src="image.jpg" alt="An image">
+			<figcaption>This is a figure caption.</figcaption>
+		</figure>
+		<aside>
+			<h2>Related Content</h2>
+			<p>This is some related content.</p>
+		</aside>
+	</article>
+	<footer>
+		<p>&copy; 2022 HTML5 Article</p>
+	</footer>
 </body>
 </html>

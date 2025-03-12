@@ -1,0 +1,29 @@
+//2.Create an array consisting of fruits names and when we click on a button sort it in descending order. 
+<html>
+<head>
+<title>Fruit Sorter</title>
+</head>
+<body>
+<ul id="fruitList"></ul>
+<button id="sortButton">Sort Fruits (Descending)</button>
+<script>
+const fruits = ["apple", "banana", "orange", "grape", "kiwi", "mango"];
+function displayFruits(arr) {
+  const list = document.getElementById("fruitList");
+  list.innerHTML = ""; 
+  arr.forEach(fruit => {
+    const listItem = document.createElement("li");
+    listItem.textContent = fruit;
+    list.appendChild(listItem);
+  });
+}
+
+function sortFruitsDescending() {
+  fruits.sort((a, b) => b.localeCompare(a));
+  displayFruits(fruits);
+}
+displayFruits(fruits);
+document.getElementById("sortButton").addEventListener("click",sortFruitsDescending);
+</script>
+</body>
+</html>

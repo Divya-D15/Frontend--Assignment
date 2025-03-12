@@ -1,0 +1,29 @@
+//2.Show the javascript validation. When you click submit, the text box doesn't need to be empty.
+
+<html >
+<head>
+  
+    <title>Form Validation</title>
+    <script>
+        function validateForm() {
+            var inputField = document.getElementById("textBox").value;
+
+            if (inputField.trim() !== "") {
+                return true;  
+            } else {
+                     alert("Please enter a value before submitting!");
+                return false;  
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form onsubmit="return validateForm()">
+        <label for="textBox">Enter something: </label>
+        <input type="text" id="textBox" name="textBox">
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+</html>

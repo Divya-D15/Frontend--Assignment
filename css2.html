@@ -1,0 +1,86 @@
+//2. Create a list and change its list-style-type 
+
+<html>
+<head>
+        <title>Different Types of CSS Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        
+        .grid-fixed {
+            grid-template-columns: 100px 100px 100px;
+        }
+
+   
+        .grid-auto-fit {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+
+    
+        .grid-auto-fill {
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        }
+
+      
+        .grid-explicit {
+            grid-template-columns: 1fr 2fr 1fr;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Basic Grid with Fixed Columns (100px each)</h2>
+    <div class="grid-container grid-fixed">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+
+    <h2>Grid with Auto-Fit (Responsive Columns)</h2>
+    <div class="grid-container grid-auto-fit">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+
+    <h2>Grid with Auto-Fill (Fills Available Space)</h2>
+    <div class="grid-container grid-auto-fill">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+
+    <h2>Grid with Explicit Column Sizing (1fr - 2fr - 1fr)</h2>
+    <div class="grid-container grid-explicit">
+        <div class="grid-item">A</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+    </div>
+
+</body>
+</html>

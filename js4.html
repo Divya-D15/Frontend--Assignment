@@ -1,0 +1,49 @@
+//4.Write functions to set a cookie, get a cookie and check a cookie in a single program. 
+
+<html>
+<head>
+    <title>Cookie</title>
+    <script>
+
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+        function getCookie(name) {
+            let nameEQ = name + "=";
+            let cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i];
+                while (cookie.charAt(0) === ' ') {
+                    cookie = cookie.substring(1);
+                }
+                if (cookie.indexOf(nameEQ) === 0) {
+                    return cookie.substring(nameEQ.length, cookie.length);
+                }
+            }
+            return null;
+        }
+        function checkCookie(name) {
+            let cookie = getCookie(name);
+            if (cookie !== null) {
+                console.log("Cookie found: " + name + " = " + cookie);
+                return true;
+            } else {
+                console.log("Cookie not found: " + name);
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Cookie Example</h2>
+    <button onclick="setCookie('username', 'JohnDoe', 7)">Set Cookie</button>
+    <button onclick="alert(getCookie('username'))">Get Cookie</button>
+    <button onclick="alert(checkCookie('username'))">Check Cookie</button>
+</body>
+</html>

@@ -1,0 +1,26 @@
+//5.Write a program with variable hoisting(initialization first then declaration). 
+
+<html>
+<head>
+    <title>JavaScript Hoisting</title>
+</head>
+<body>
+
+    <h2>Variable Hoisting in JavaScript</h2>
+    <p id="output1"></p>
+    <p id="output2"></p>
+
+    <script>
+      
+        let result1 = "";
+        let result2 = "";
+
+        result1 = "Before initialization: " + myVar; 
+        myVar = 10; 
+        var myVar; 
+        result2 = "After initialization: " + myVar; 
+        document.getElementById("output1").textContent = result1;
+        document.getElementById("output2").textContent = result2;
+    </script>
+</body>
+</html>

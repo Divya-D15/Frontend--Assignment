@@ -1,0 +1,47 @@
+//3.How console.log() can be used for Debugging. 
+
+<html>
+<head>
+        <title>Console.log Debugging</title>
+</head>
+<body>
+
+    <h1>Open Console to See Debugging Logs</h1>
+    <button onclick="testFunction()">Click Me</button>
+
+    <script>
+        let name = "John";
+        console.log("Name:", name);
+        function testFunction() {
+            console.log("testFunction() called");
+            let result = add(5, 10);
+            console.log("Result of add():", result);
+        }
+
+        function add(a, b) {
+            console.log("add() function called with:", a, b);
+            return a + b;
+        }
+        for (let i = 0; i < 5; i++) {
+            console.log("Loop iteration:", i);
+        }
+        let user = { name: "Alice", age: 25 };
+        console.log("User object:", user);
+        let users = [
+            { name: "Alice", age: 25 },
+            { name: "Bob", age: 30 }
+        ];
+        console.table(users);
+        console.group("User Info");
+        console.log("Name: Alice");
+        console.log("Age: 25");
+        console.groupEnd();
+        console.error("This is an error message");
+        console.warn("This is a warning message");
+        console.info("This is an info message");   
+        let age = 15;
+        console.assert(age >= 18, "Age must be 18 or older");
+    </script>
+
+</body>
+</html>

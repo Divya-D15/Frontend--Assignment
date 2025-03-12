@@ -1,0 +1,40 @@
+//5.Use I-frames and Marquee in your webpage.
+
+<html >
+<head>
+    <title>Iframes and Marquee Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        iframe {
+            width: 80%;
+            height: 300px;
+            border: 2px solid black;
+        }
+        marquee {
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Using Iframe and Marquee in HTML</h1>
+
+    <marquee behavior="scroll" direction="left">Welcome to our website! Stay tuned for updates.</marquee>
+
+    <h2>Embedded Website using Iframe</h2>
+    <iframe src="https://www.example.com" title="Example Website"></iframe>
+
+    <h2>Embedded YouTube Video using Iframe</h2>
+    <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allowfullscreen>
+    </iframe>
+
+</body>
+</html>

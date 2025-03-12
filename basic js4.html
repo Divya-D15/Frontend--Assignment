@@ -1,0 +1,23 @@
+//4. Create an object "person" with properties firstname and lastname. Display these properties using 2 different ways of accessing.
+<html>
+<head>
+    <title>Person Object in JavaScript</title>
+</head>
+<body>
+    <h2>Person Details</h2>
+    <p id="output1"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+    <p id="output4"></p>
+    <script>
+        const person = {
+            firstname: "Madeena",
+            lastname: "Beebi"
+        };
+        document.getElementById("output1").textContent = "Using dot notation: " + person.firstname;
+        document.getElementById("output2").textContent = "Using dot notation: " + person.lastname;
+        document.getElementById("output3").textContent = "Using bracket notation: " + person['firstname'];
+        document.getElementById("output4").textContent = "Using bracket notation: " + person['lastname'];
+    </script>
+</body>
+</html>

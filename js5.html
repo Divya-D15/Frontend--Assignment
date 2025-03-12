@@ -1,0 +1,32 @@
+//5.Create a JSON object and access it using dot notation.
+
+<html>
+<head>
+       <title>JSON Object in JavaScript</title>
+</head>
+<body>
+
+    <h1>JSON Object </h1>
+    <p id="output"></p>
+
+    <script>
+        
+        let person = {
+            name: "Madeena Beebi",
+            age: 19,
+            address: {
+                city: "Visakhapatnam",
+             },
+            hobbies: ["Crafting", "Painting", "Gaming"]
+        };
+        let output = `
+            Name: ${person.name} <br>
+            Age: ${person.age} <br>
+            City: ${person.address.city} <br>
+            Hobby: ${person.hobbies[1]}
+        `;
+        document.getElementById("output").innerHTML = output;
+    </script>
+
+</body>
+</html>

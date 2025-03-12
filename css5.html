@@ -1,0 +1,94 @@
+//5.Write a program of view-port for grid, media queries, image and video.
+<html>
+<head>
+ 
+  <title>Responsive Grid with Media Queries</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+ 
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);  
+      gap: 20px;
+      padding: 20px;
+    }
+
+
+    .item {
+      background: #f4f4f4;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+
+    img {
+      max-width: 100%;  
+      height: auto;
+      border-radius: 8px;
+    }
+
+    
+    video {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    
+    @media (max-width: 1200px) {
+      .container {
+        grid-template-columns: repeat(2, 1fr); 
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr; 
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 14px;  
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+
+  <div class="container">
+
+    <div class="item">
+      <h2>Responsive Image</h2>
+      <img src="html.jpg" alt="Sample Image">
+    </div>
+
+
+    <div class="item">
+      <h2>Responsive Video</h2>
+      <video controls>
+        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+\
+    <div class="item">
+      <h2>Responsive Grid</h2>
+      <p>This grid layout adjusts automatically based on your screen size.</p>
+    </div>
+  </div>
+
+</body>
+</html>
+

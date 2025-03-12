@@ -1,0 +1,23 @@
+//6. Use strict mode in your program and understand why variable not declared causes error.
+<html>
+<head>
+    <title>Strict Mode in JavaScript</title>
+</head>
+<body>
+
+    <h2>JavaScript Strict Mode Example</h2>
+    <p id="output"></p>
+
+    <script>
+        "use strict"; // Enabling strict mode
+
+        try {
+            myVar = 10; 
+            document.getElementById("output").textContent = "Value of myVar: " + myVar;
+        } catch (error) {
+            document.getElementById("output").textContent = "Error: " + error.message;
+        }
+    </script>
+
+</body>
+</html>

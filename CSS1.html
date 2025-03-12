@@ -1,0 +1,55 @@
+//1.Create a table and apply table-layout as fixed and none
+<html>
+<head>
+        <title>Table Layout Example</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        .fixed-table {
+            table-layout: fixed;
+        }
+        .none-table {
+            table-layout: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Table with table-layout: fixed</h2>
+    <table class="fixed-table">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>Fixed Width</td>
+            <td>Fixed Width</td>
+            <td>Fixed Width</td>
+        </tr>
+    </table>
+
+    <h2>Table with table-layout: auto (Default behavior, similar to none)</h2>
+    <table class="none-table">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>Flexible Width</td>
+            <td>Flexible Width with more content that stretches</td>
+            <td>Flexible Width</td>
+        </tr>
+    </table>
+
+</body>
+</html>
